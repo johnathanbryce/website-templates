@@ -1,0 +1,19 @@
+.footer_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section_title{
+    font-weight: bold;
+}
+
+.section_title, .link{
+    color: var(--textColorFlip);
+}
+
+.link:hover{
+    cursor: pointer;
+    color: var(--highlightColor);
+}
