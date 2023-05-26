@@ -1,0 +1,53 @@
+.hamburger, .hamburger_active{
+    display: none;
+    /* adjust as necessary */
+    position: absolute;
+    top: 5.5rem;
+    right: 2rem;
+    /* */
+    cursor: pointer;
+    color: white;
+  }
+  
+.bar {
+    display: block;
+    width: 4rem;
+    height: 0.4rem;
+    margin: 0.5rem auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:  white;
+}
+
+.hamburger_active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger_active .bar:nth-child(1){
+    transform: translateY(0.8rem) rotate(45deg);
+}
+.hamburger_active .bar:nth-child(3){
+    transform: translateY(-0.8rem) rotate(-45deg);
+}
+
+/* Tablets (portrait) */
+@media (max-width: 950px) { 
+    .hamburger{
+        display: block;
+    }
+}
+
+/* Mobile Devices (landscape) */
+@media (max-width: 775px) { 
+
+}
+
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) {  
+
+}
+
+/* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
+@media (max-width: 325px) {  
+
+}

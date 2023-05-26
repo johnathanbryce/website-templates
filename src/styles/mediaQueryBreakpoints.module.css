@@ -1,5 +1,21 @@
-/* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
-@media (max-width: 325px) {  
+
+/* Desktops / Laptops: */
+@media (max-width: 1350px) { 
+
+}
+
+/* Tablets (landscape) / Small Laptops) */
+@media (max-width: 1200px) { 
+
+}
+
+/* Tablets (portrait) */
+@media (max-width: 950px) { 
+
+}
+
+/* Mobile Devices (landscape) */
+@media (max-width: 775px) { 
 
 }
 
@@ -8,22 +24,7 @@
 
 }
 
-/* Mobile Devices (landscape) */
-@media (max-width: 767px) { 
-
-}
-
-/* Tablets (portrait) */
-@media (max-width: 991px) { 
-
-}
-
-/* Tablets (landscape) / Small Laptops) */
-@media (max-width: 1199px) { 
-
-}
-
-/* Desktops / Laptops: */
-@media (max-width: 1350px) { 
+/* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
+@media (max-width: 325px) {  
 
 }
