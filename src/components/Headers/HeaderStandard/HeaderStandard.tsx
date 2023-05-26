@@ -3,14 +3,18 @@ import {useState, useEffect, useRef} from 'react'
 import styles from './HeaderStandard.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+// internal assets
+import logoPlaceholder from '../../../../public/images/logoPlaceholder.jpg'
+// internal components
+import HamburgerDropdown from '../HeaderDropdowns/HamburgerDropdown/HamburgerDropdown'
+import NavBarDropdownFullScreen from '../NavBarDropdownFullScreen/NavBarDropdownFullScreen'
+
 
 /*
-HEADER NOTES:
-
-SINGLE PAGE SCROLL NAVIGATION: use 'react-scroll' package
+NOTES:
+- SINGLE PAGE SCROLL NAVIGATION: use 'react-scroll' package
     - import { Link } from 'react-scroll'
     -  <li><Link to="about" spy={true} smooth={true} duration={500} offset={10} > ABOUT </Link></li>
-
 
 */
 
@@ -44,37 +48,32 @@ function HeaderStandard() {
     }, [])
     
   return (
-    <header className={styles.header}>
-        <h2> LOGO </h2>
+    <header className={styles.header} ref={dropdownRef}>
+        <Image  className={styles.logo} src={logoPlaceholder}  alt='logo'/>
+
+        {/*  dropdown icon displays >950 px screen size*/}
+        <HamburgerDropdown isDropdownActive={isDropdownActive} toggleDropdown={toggleDropdown}/>
         
-        {/*  hamburger dropdown >800 px screen size*/}
-        <div className={`${styles.hamburger} ${isDropdownActive ? styles.hamburger_active : '' }`} onClick={toggleDropdown}>
-            <div className={styles.bar} ></div>
-            <div className={styles.bar} ></div>
-            <div className={styles.bar} ></div>
-        </div>
 
         <nav className={styles.navbar}>
             <ul>
-                <li><Link href=""> NAV1 </Link></li> 
-                <li><Link href=""> NAV2 </Link></li>
-                <li><Link href=""> NAV3 </Link></li>  
-                <li><Link href=""> NAV4 </Link></li>     
-                <li><Link href=""> NAV5 </Link></li>
+                <li><Link href=""> HOME </Link></li> 
+                <li><Link href=""> FEATURES </Link></li>
+                <li><Link href=""> PRICING </Link></li>  
+                <li><Link href=""> PRODUCTS </Link></li>     
+                <li><Link href=""> CONTACT </Link></li>
             </ul>
         </nav>
         
-        {/* navbar dropdown top >800 px screen size */}
+        {/* dropdown nav displays on >950 px screen size */}
         { isDropdownActive &&
-            <nav className={styles.navbar_dropdown}>
-                <ul>
-                    <li><Link href=""> NAV1 </Link></li> 
-                    <li><Link href=""> NAV2 </Link></li>
-                    <li><Link href=""> NAV3 </Link></li>  
-                    <li><Link href=""> NAV4 </Link></li>     
-                    <li><Link href=""> NAV5 </Link></li>
-                </ul>
-            </nav>
+            <NavBarDropdownFullScreen>
+                    <li><Link href="" onClick={onNavItemClickCloseDropdown}> HOME </Link></li> 
+                    <li><Link href="" onClick={onNavItemClickCloseDropdown}> FEATURES </Link></li>
+                    <li><Link href="" onClick={onNavItemClickCloseDropdown}> PRICING </Link></li>  
+                    <li><Link href="" onClick={onNavItemClickCloseDropdown}> PRODUCTS </Link></li>     
+                    <li><Link href="" onClick={onNavItemClickCloseDropdown}> CONTACT </Link></li>
+            </NavBarDropdownFullScreen>
         }
 
 

@@ -1,3 +1,63 @@
+/* NOTE HEADER COLUMN CHANGE <950px BELOW*/
 .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10rem;
     background-color: var(--primaryColor);
+    position: relative;
 }
+
+.logo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    object-fit: cover;
+
+}
+
+.navbar ul {
+    display: flex;
+    align-items: baseline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 3.25rem;
+}
+
+.navbar li {
+    position: relative; /* for underline animation */
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+}
+
+
+.navbar li::before {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--defaultColor);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar li:hover::before {
+    transform: scaleX(1);
+}
+
+/* Tablets (portrait) */
+@media (max-width: 950px) { 
+    .header {
+        flex-direction: column; /* allows for dropdown to display "below" header and icon*/
+        align-items: flex-start;
+        gap: 10rem;
+    }
+    .navbar{
+        display: none;
+    }
+}
+

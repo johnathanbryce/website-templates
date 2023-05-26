@@ -5,8 +5,8 @@ import HeaderStandard from '@/components/Headers/HeaderStandard/HeaderStandard'
 
 export default function Home() {
   return (
-    <main>
+      <main>
 
-    </main>
+      </main>
   )
 }
