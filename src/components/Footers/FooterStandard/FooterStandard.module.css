@@ -1,0 +1,21 @@
+
+.footer_grid{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    padding: 2.5rem 10rem; /* MATCH WITH HEADER */
+    background-color: var(--primaryColor);
+}
+
+/* Tablets (portrait) */
+@media (max-width: 950px) { 
+    .footer_grid{
+        grid-template-columns: repeat(2, auto);
+        gap: 5.5rem;
+    }
+}
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) { 
+    .footer_grid{
+        padding: 3rem 2.5rem; /* MATCH WITH HEADER */
+    }
+}

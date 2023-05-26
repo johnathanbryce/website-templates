@@ -3,8 +3,7 @@ import '../styles/globals.css'
 import '../styles/reset.css'
 import '../styles/vars.css'
 import { Roboto } from 'next/font/google'
-// internal components
-import HeaderStandard from '@/components/Headers/HeaderStandard/HeaderStandard'
+
 
 
 const roboto = Roboto({
@@ -24,7 +23,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <HeaderStandard />
       <body className={roboto.className}>{children}</body>
     </html>
   )
