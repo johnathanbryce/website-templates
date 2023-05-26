@@ -1,0 +1,13 @@
+:root {
+    --primaryColor: #58626C;
+    --secondaryColor: #dac8be;
+    --tertiaryColor: #ECC1A1;
+    --defaultColor: #F5F1EE; 
+    
+    --backgroundColor: #F5F1EE;
+    --backgroundColorFlip: #58626C;
+
+    --textColor: #58626C;
+    --textColorFlip: #F5F1EE;
+    
+}
