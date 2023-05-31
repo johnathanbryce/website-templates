@@ -1,0 +1,21 @@
+.container{
+    background-color: white;
+    margin: 0 10%;
+    padding: 0;
+    /* background: transparent; */      /* use if containing a movie or image section */
+  }
+  
+/* Smaller Screen Rezise */
+@media only screen and (max-width: 1200px){
+.container{
+    background-color: white;
+    margin: 0 5rem;
+}
+}
+
+/* Galaxy fold / < 300 px tiny screens */
+@media only screen and (max-width: 300px){
+.container{
+    margin: 0 1rem;
+}
+}
